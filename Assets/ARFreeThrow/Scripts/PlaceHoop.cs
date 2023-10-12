@@ -73,6 +73,8 @@ public class PlaceHoop : MonoBehaviour
 
     private void Start()
     {
+        isPlaced = false;
+
         distanceText = FindObjectOfType<DistanceText>();
 
         distanceText.Distance = 0;
@@ -136,7 +138,6 @@ public class PlaceHoop : MonoBehaviour
         float distance = Vector3.Distance(cameraPosition, spawnedHoop.transform.position);
         HoopDistance = distance;
         distanceText.Distance = HoopDistance;
-        // Debug.Log(distance);
     }
 
     public void ResetARSession()
